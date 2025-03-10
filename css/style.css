@@ -62,7 +62,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #ffe4d9;
+    background-color:rgb(177, 248, 177);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     list-style: none;
     padding: 10px;
@@ -115,7 +115,7 @@ body {
 
 .product-card button {
   padding: 10px 20px;
-  background-color: #ffb599; /* Botón melocotón */
+  background-color: rgb(141, 252, 141); /* Botón melocotón */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -124,7 +124,7 @@ body {
 }
 
 .product-card button:hover {
-  background-color: #ff9a80; /* Hover del botón */
+  background-color: green; /* Hover del botón */
 }
 video{
 
@@ -133,7 +133,7 @@ video{
   
 /* Footer */
 footer {
-    background-color: #ffe4d9; /* Fondo melocotón claro */
+    background-color:rgb(185, 247, 185); /* Fondo verde claro */
     margin-top: 30px;
     padding: 20px 15px;
     color: #333;
@@ -163,7 +163,7 @@ footer {
   }
   
   .footer-section a:hover {
-    color: #ff9a80; /* Hover melocotón */
+    color: green; /* Hover melocotón */
   }
   
   .footer-section iframe {
@@ -200,7 +200,7 @@ footer {
   .faq-question {
     font-size: 16px;
     font-weight: bold;
-    background-color: #ffb599; /* Fondo melocotón */
+    background-color:green; /* Fondo melocotón */
     color: #fff;
     padding: 15px;
     cursor: pointer;
@@ -209,13 +209,13 @@ footer {
   }
   
   .faq-item[open] .faq-question {
-    background-color: #ff9a80; /* Cambia el color al abrir */
+    background-color:green; /* Cambia el color al abrir */
   }
   
   .faq-answer {
     padding: 15px;
     font-size: 14px;
-    background-color: #ffe4d9; /* Fondo melocotón claro */
+    background-color: rgb(166, 241, 166); /* Fondo melocotón claro */
     color: #333;
   }
   .contact-form {
@@ -240,7 +240,7 @@ footer {
   
 }  
 .noticia > img{
-  float: left
+  float: center
 }
 @font-face {
   font-family: cursive;
@@ -261,7 +261,7 @@ footer {
   .contact-form input:focus,
   .contact-form textarea:focus {
     outline: none;
-    border-color: #ff9a80; /* Color melocotón */
+    border-color:green; /* Color melocotón */
     background-color: #fff;
   }
   
@@ -269,7 +269,7 @@ footer {
     display: block;
     width: 100%; /* Botón ocupa todo el ancho disponible del contenedor */
     padding: 10px 15px;
-    background-color: #ffb599;
+    background-color: green;
     color: #fff;
     font-size: 16px;
     border: none;
@@ -279,7 +279,7 @@ footer {
   }
   
   .contact-form button:hover {
-    background-color: #ff9a80;
+    background-color: rgb(159, 248, 159);
   }
   /*Tabla horarios*/
 /* Reset básico */
@@ -342,10 +342,43 @@ tbody tr:hover {
 }
 
 tfoot {
-  background-color: #ffe8dc;
+  background-color:green;
   color: #8b5742;
   text-align: center;
   font-weight: bold;
   padding: 10px;
   border-top: 2px solid #f4c2a1;
+}
+/*BLOG_CSS*/
+.blog-block {
+  background-color: green;
+	border: 0.063rem solid var(grey);
+	border-radius: 0.625rem;
+	padding: 0.5vh 2vh;
+	margin-top: 1vh;
+	color: var(black);
+	justify-content: space-around;
+	align-items: center;
+  width: 300px;
+  height: 300px;
+}
+  
+
+.marcas-noticiero {
+   width: 120px;
+   height: 120pxs;
+
+}
+
+.ver-button {
+  background-color: green;
+	border: 0.063rem solid var(grey);
+	border-radius: 0.625rem;
+	padding: 0.5vh 2vh;
+	margin-top: 1vh;
+	color: var(black);
+	justify-content: space-around;
+	align-items: center;
+
+
 }
