@@ -1,72 +1,92 @@
 /* General */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient( #ffffff, #98FB98);
-    color: #333;
+  }
 
+ .imagenFondoFoote {
+    background-image: url('../imgs/fondoFoote.png'); /* Ruta relativa a la imagen */
+    background-size: 100% auto; /* Ajustar el tamaño de la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    background-position: top; /* Centrar la imagen de fondo */
   }
   
   /* Header */
   header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 10px 20px;
-    background-color: #ffffff; /* Melocotón claro */
-  }
+    background-color: #ffffff;
+}
 
-  img {
+img {
     max-width: 100%;
     height: auto;
-  }
-  
-  
-  .logo img {
-    height: 50px;
-  }
-  
-  .navbar ul {
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 0px; /* Asegurar que no haya espacio extra */
+  padding-bottom: 0px; /* Evitar relleno extra */
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px; /* Reducir drásticamente el espacio */
+  padding-top: 0px; /* Asegurar que no haya relleno extra */
+}
+
+
+.navbar ul {
     list-style: none;
     display: flex;
     gap: 20px;
     padding: 0;
     margin: 0;
-  }
-  
-  .navbar ul li {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navbar ul li {
     position: relative;
-  }
-  
-  .navbar ul a {
+}
+
+.navbar ul a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-  }
-  
-  .submenu {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.3s ease-in-out;
-  }
-  .navbar ul li:hover > .submenu {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  
-  /* Submenu desplegable */
-  .submenu {
+}
+
+
+/* Asegurar que el submenu esté oculto por defecto */
+.submenu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color:rgb(177, 248, 177);
+    background-color: rgb(177, 248, 177);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     list-style: none;
+    visibility: hidden;
     padding: 10px;
-  }
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+/* Solo mostrar el submenu cuando el usuario pase el mouse por el li */
+.navbar ul li:hover > .submenu {
+  display: block;
+  visibility: visible; /* Mostrar el submenu */
+  opacity: 1; /* Hacer el submenu visible */
+}
   
   .submenu li {
     margin: 5px 0;
@@ -83,11 +103,15 @@ body {
   }
   
 /* Rejilla de productos */
+/* Rejilla de productos */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Diseño adaptable */
   gap: 15px; /* Espacio entre las tarjetas */
   padding: 20px;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  min-height: 100vh; /* Asegurar que ocupe al menos el 100% de la altura de la ventana */
 }
 
 .product-card {
@@ -100,8 +124,8 @@ body {
 }
 
 .product-card img {
-  width: 100%;
-  height: auto;
+  width: 200px;
+  height: 200px;
   border-radius: 8px 8px 0 0;
 }
 
@@ -124,7 +148,7 @@ body {
 }
 
 .product-card button:hover {
-  background-color: green; /* Hover del botón */
+  background-color: #40a900; /* Hover del botón */
 }
 video{
 
@@ -133,7 +157,7 @@ video{
   
 /* Footer */
 footer {
-    background-color:rgb(185, 247, 185); /* Fondo verde claro */
+  background-color: #ffffff;
     margin-top: 30px;
     padding: 20px 15px;
     color: #333;
@@ -163,7 +187,7 @@ footer {
   }
   
   .footer-section a:hover {
-    color: green; /* Hover melocotón */
+    color: #40a900; /* Hover verde */
   }
   
   .footer-section iframe {
@@ -200,7 +224,7 @@ footer {
   .faq-question {
     font-size: 16px;
     font-weight: bold;
-    background-color:green; /* Fondo melocotón */
+    background-color:#40a900; /* Fondo verde */
     color: #fff;
     padding: 15px;
     cursor: pointer;
@@ -209,13 +233,13 @@ footer {
   }
   
   .faq-item[open] .faq-question {
-    background-color:green; /* Cambia el color al abrir */
+    background-color:#40a900; /* Cambia el color al abrir */
   }
   
   .faq-answer {
     padding: 15px;
     font-size: 14px;
-    background-color: rgb(166, 241, 166); /* Fondo melocotón claro */
+    background-color: rgb(166, 241, 166); /* Fondo verde claro */
     color: #333;
   }
   .contact-form {
@@ -261,7 +285,7 @@ footer {
   .contact-form input:focus,
   .contact-form textarea:focus {
     outline: none;
-    border-color:green; /* Color melocotón */
+    border-color:#40a900; /* Color verde */
     background-color: #fff;
   }
   
@@ -269,7 +293,7 @@ footer {
     display: block;
     width: 100%; /* Botón ocupa todo el ancho disponible del contenedor */
     padding: 10px 15px;
-    background-color: green;
+    background-color: #40a900;
     color: #fff;
     font-size: 16px;
     border: none;
@@ -288,7 +312,7 @@ footer {
 table > h2 {
   text-align: center;
   margin: 20px 0;
-  color: #b8644f; /* Tono melocotón oscuro para el título */
+  color:#40a900; /* Tono verde oscuro para el título */
 }
 
 table {
@@ -342,16 +366,24 @@ tbody tr:hover {
 }
 
 tfoot {
-  background-color:green;
+  background-color:#40a900;
   color: #8b5742;
   text-align: center;
   font-weight: bold;
   padding: 10px;
   border-top: 2px solid #f4c2a1;
 }
+
+.contenedor-main{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
 /*BLOG_CSS*/
 .blog-block {
-  background-color: green;
+  background-color: #40a900;
 	border: 0.063rem solid var(grey);
 	border-radius: 0.625rem;
 	padding: 0.5vh 2vh;
@@ -359,8 +391,30 @@ tfoot {
 	color: var(black);
 	justify-content: space-around;
 	align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 50%;
+  margin: 2%;
+  overflow: hidden;
   width: 300px;
   height: 300px;
+}   
+
+@media screen and (max-width: 768px) {
+  .blog-block{
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 2%;
+  }
+
+  .blog-block p {
+    font-size: 100%;
+  }
+}
+
+.blog-block p{
+  position: relative;
+    text-align: center;
+    font-size: 80%;
 }
   
 
@@ -371,7 +425,7 @@ tfoot {
 }
 
 .ver-button {
-  background-color: green;
+  background-color: #40a900;
 	border: 0.063rem solid var(grey);
 	border-radius: 0.625rem;
 	padding: 0.5vh 2vh;
@@ -382,3 +436,12 @@ tfoot {
 
 
 }
+.img-redes{
+  width: 30px;
+  height: 30px;
+}
+/* FONDO CATEGORÍAS
+.fondo-productos{
+  background-color: #42241b;
+}
+*/
