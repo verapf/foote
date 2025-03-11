@@ -157,10 +157,10 @@ video{
   
 /* Footer */
 footer {
-  background-color: #ffffff;
+  background-color: #40a900;
     margin-top: 30px;
     padding: 20px 15px;
-    color: #333;
+    color:#42241b;
   }
   
   .footer-container {
@@ -177,12 +177,12 @@ footer {
   .footer-section h4 {
     margin-bottom: 10px;
     font-size: 16px;
-    color: #444;
+    color: #42241b;
   }
   
   .footer-section p, .footer-section a {
     font-size: 14px;
-    color: #333;
+    color: #42241b;
     text-decoration: none;
   }
   
@@ -206,7 +206,7 @@ footer {
   .footer-bottom {
     text-align: center;
     font-size: 12px;
-    color: #666;
+    color: #42241b;
     margin-top: 15px;
   }
   /* Estilos para las FAQs */
@@ -225,7 +225,7 @@ footer {
     font-size: 16px;
     font-weight: bold;
     background-color:#40a900; /* Fondo verde */
-    color: #fff;
+    color: #42241b;
     padding: 15px;
     cursor: pointer;
     border-radius: 5px;
@@ -239,15 +239,16 @@ footer {
   .faq-answer {
     padding: 15px;
     font-size: 14px;
-    background-color: rgb(166, 241, 166); /* Fondo verde claro */
-    color: #333;
+    background-color:#42241b; /* Fondo verde claro */
+    color: white;
   }
   .contact-form {
     width: 95%; /* Ocupa todo el ancho disponible */
     max-width: 95%; /* Establece un ancho máximo para evitar que sea demasiado grande */
     padding: 20px;
     margin: 0 auto; /* Centrado automático */
-    background-color: #fff;
+    background-color: #42241b;
+    color: white;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -380,6 +381,12 @@ tfoot {
   display: flex;
   position: relative;
   flex-wrap: wrap;
+  text-align: center;
+}
+
+.contenedor-main h2{
+  text-align: center;
+  padding: 5%;
 }
 /*BLOG_CSS*/
 .blog-block {
