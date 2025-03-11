@@ -139,7 +139,7 @@ img {
 
 .product-card button {
   padding: 10px 20px;
-  background-color: rgb(141, 252, 141); /* Botón melocotón */
+  background-color:#40a900; /* Botón  */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -148,8 +148,15 @@ img {
 }
 
 .product-card button:hover {
-  background-color: #40a900; /* Hover del botón */
+  padding: 10px 20px;
+  background-color:#42241b; /* Botón  */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
 }
+
 video{
 
   width: 600px;
