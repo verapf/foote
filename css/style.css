@@ -9,6 +9,9 @@ body {
     background-size: 100% auto; /* Ajustar el tamaño de la imagen para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evitar que la imagen se repita */
     background-position: top; /* Centrar la imagen de fondo */
+    display: block;
+    justify-content: center;
+    align-items: center;
   }
   
   /* Header */
@@ -100,7 +103,15 @@ img {
   /* Main */
   main {
     padding: 20px;
+    justify-content: center;
+    align-items: center;
   }
+
+ main .boton-categoria{
+  
+   margin-left: 30%;
+
+ }
   
 /* Rejilla de productos */
 /* Rejilla de productos */
@@ -459,3 +470,40 @@ tfoot {
   background-color: #42241b;
 }
 */
+.boton-categoria {
+  background-color: #40a900;
+  color: #42241b;
+  border-radius: 0.625rem;
+  width: 40%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton-categoria a{
+  text-decoration: none;
+  font-size: medium;
+  color:#42241b
+}
+.categoria-card {
+  background-color: #40a900;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categoria-card :hover {
+  background-color: #42241b;
+  color: #40a900;
+}
+.categoria-card a{
+  text-decoration: none;
+  font-size: medium;
+  color:#42241b
+}
