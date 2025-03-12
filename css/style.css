@@ -473,6 +473,7 @@ tfoot {
 }
 */
 .boton-categoria {
+  margin-top: 2%;
   background-color: #40a900;
   color: #42241b;
   border-radius: 0.625rem;
