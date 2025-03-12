@@ -135,8 +135,9 @@ img {
 }
 
 .product-card img {
-  width: 200px;
-  height: 200px;
+  width: 50%;
+  height: auto;
+  max-height: 200px;
   border-radius: 8px 8px 0 0;
 }
 
@@ -393,18 +394,19 @@ tfoot {
   border-top: 2px solid #f4c2a1;
 }
 
-.contenedor-main{
+
+.contenedor-main h2{
+  text-align: center;
+  padding: 5%;
+}
+
+.contenedor-columnas-blog{
   justify-content: center;
   align-items: center;
   display: flex;
   position: relative;
   flex-wrap: wrap;
   text-align: center;
-}
-
-.contenedor-main h2{
-  text-align: center;
-  padding: 5%;
 }
 /*BLOG_CSS*/
 .blog-block {
