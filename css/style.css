@@ -4,14 +4,15 @@ body {
     padding: 0;
   }
 
- .imagenFondoFoote {
+  .imagenFondoFoote {
     background-image: url('../imgs/fondoFoote.png'); /* Ruta relativa a la imagen */
-    background-size: 100% auto; /* Ajustar el tamaño de la imagen para cubrir todo el fondo */
+    background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evitar que la imagen se repita */
-    background-position: top; /* Centrar la imagen de fondo */
+    background-position: center; /* Centrar la imagen de fondo */
     display: block;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; /* Asegurar que ocupe al menos el 100% de la altura de la ventana */
   }
   
   /* Header */
@@ -141,9 +142,10 @@ img {
 }
 
 .product-card img {
-  width: 50%;
-  height: auto;
-  max-height: 200px;
+  width: 100%; /* Ajustar el ancho de la imagen al 100% del contenedor */
+  height: auto; /* Mantener la proporción de la imagen */
+  max-height: 200px; /* Establecer una altura máxima si es necesario */
+  object-fit: contain; /* Asegurar que la imagen cubra el contenedor sin distorsionarse */
   border-radius: 8px 8px 0 0;
 }
 
@@ -431,6 +433,12 @@ tfoot {
   width: 300px;
   height: 300px;
 }   
+
+.blog-block img {
+  width: 100%; /* Ajustar el ancho de la imagen al 100% del contenedor */
+  height: auto; /* Mantener la proporción de la imagen */
+  object-fit: contain; /* Asegurar que la imagen se ajuste dentro del contenedor sin cortarse */
+}
 
 @media screen and (max-width: 768px) {
   .blog-block{
