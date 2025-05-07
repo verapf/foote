@@ -1,122 +1,266 @@
 <!DOCTYPE html>
-    <html lang="es">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="author" content="Carlos ,Vera Pitarch">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Foote Shop</title>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Carlos ,Vera Pitarch, Hugo Vidal">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foote Shop</title>
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="css/style.css">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-      <!-- Header con logo y menú  -->
-      <header>
-        <div class="logo">
-          <img src="imgs/logo.png" alt="Logo de la tienda">
-        </div>
-        <nav class="navbar">
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li class="dropdown">
-              <a href="html/categoria.html">Categorías</a>
-              <ul class="submenu">
-                <li><a href="../foote/html/Categorias/hombre.html">Hombres</a></li>
-                <li><a href="../foote/html/Categorias/mujer.html">Mujeres</a></li>
-                <li><a href="../foote/html/Categorias/niño.html">Niños</a></li>
-              </ul>
-            </li>
-            <li><a href="../foote/html/quienes_somos.html">Sobre Nosotros</a></li>
-            <li><a href="../foote/html/blog.html">Blog noticiero</a></li>
-            <li><a href="../foote/html/contactanos.html">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
-    
-      <!-- Main con productos -->
-      <main class="">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header con logo, menú hamburguesa, carrito y usuario -->
+  <header>
+    <div class="header-container">
+      <!-- Botón para menú lateral -->
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
       
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="../foote/imgs/1.png" alt="Los Angeles" style="width:100%;">
-            </div>
+      <!-- Logo centrado -->
+      <div class="logo">
+        <img src="imgs/logo.png" alt="Logo de la tienda">
+      </div>
       
-            <div class="item">
-              <img src="../foote/imgs/2.png" alt="Chicago" style="width:100%;">
-            </div>
-          
-            <div class="item">
-              <img src="../foote/imgs/3.png" alt="New york" style="width:100%;">
-            </div>
-          </div>
-      
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
+      <!-- Iconos de usuario y carrito -->
+      <div class="header-icons">
+        <div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
         </div>
+        <div class="user-icon">
+          <i class="fas fa-user-circle"></i>
         </div>
+      </div>
+    </div>
 
-        <div class="boton-categoria">
-          <a href="../foote/html/categoria.html">Categorias</a>
-        </div>
-      </main>
+    <!-- Menú lateral (desplegable) -->
+    <nav class="sidebar">
+      <div class="sidebar-close">
+        <i class="fas fa-times"></i>
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle">Categorías <i class="fas fa-chevron-down"></i></a>
+          <li><a href="html/categoria.html"></a></li>
+            <ul class="dropdown-menu">
+              <li><a href="html/categoria.html">Hombres</a></li>
+              <li><a href="html/categoria.html">Mujeres</a></li>
+              <li><a href="html/categoria.html">Niños</a></li>
+            </ul>
+        </li>
+        <li><a href="html/quienes_somos.html">Sobre Nosotros</a></li>
+        <li><a href="html/blog.html">Blog</a></li>
+        <li><a href="html/contactanos.html">Contacto</a></li>
+      </ul>
+    </nav>
     
-      <!-- Footer -->      <footer>
-        <div class="footer-container">
-          <!-- Aviso Legal -->
-          <div class="footer-section">
-            <h4>Aviso Legal</h4>
-            <p>Todos nuestros productos pertenencen a nuestra marca registrada, el plagio y venta no autorizada sera objeto de procesos legales. Con derecho reservado a la no distribucion para aquellas personas que no cumplan con nuestros terminos.</p>
-            <a href="aviso-legal.html">Leer más</a>
-          </div>
-      
-          <!-- Contacto -->
-          <div class="footer-section">
-            <h4>Contacto</h4>
-            <p>Teléfono: <a href="tel:+123456789">+123 456 789</a></p>
-            <p>Email: <a href="mailto:Foote@fvecomp.com">Foote&#64;footecomp.com </a></p>
-          </div>
-      
-          <!-- Mapa -->
-          <div class="footer-section">
-            <h4>Encuéntranos</h4>
-            <div class="img-redes">
-              @footecomp
-              <img src="../foote/imgs/tiktok.png" alt="tiktok logo">
-              @footecomp
-              <img src="../foote/imgs/logo marron.png" alt="instagram logo">
-            </div>
-          </div>
+    <!-- Overlay para cuando el menú lateral está abierto -->
+    <div class="sidebar-overlay"></div>
+  </header>
+
+  <!-- Banner de registro con 20% descuento -->
+  <div class="promo-banner">
+    <div class="promo-content">
+      <h2>¡REGÍSTRATE AHORA!</h2>
+      <p>Obtén un 20% de descuento en tu primera compra</p>
+      <button id="show-register">REGISTRARME</button>
+    </div>
+  </div>
+
+  <!-- Formulario de registro (modal) -->
+  <div class="register-modal" id="register-modal">
+    <div class="register-form">
+      <div class="modal-close">
+        <i class="fas fa-times"></i>
+      </div>
+      <h2>Crear Cuenta</h2>
+      <p>Regístrate y obtén 20% de descuento en tu primera compra</p>
+      <form id="signup-form">
+        <div class="form-group">
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" name="password" placeholder="Contraseña" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">Acepto los términos y condiciones</label>
+        </div>
+        <button type="submit" class="register-btn">Registrarme</button>
+      </form>
+      <div class="login-link">
+        ¿Ya tienes cuenta? <a href="#">Iniciar sesión</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main con productos -->
+  <main>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="imgs/1.png" alt="Los Angeles" style="width:100%;">
+        </div>
+  
+        <div class="item">
+          <img src="imgs/2.png" alt="Chicago" style="width:100%;">
         </div>
       
-        <div class="footer-bottom">
-          <p>&copy; 2024 Tienda de Ropa Foote. Todos los derechos reservados.</p>
+        <div class="item">
+          <img src="imgs/3.png" alt="New york" style="width:100%;">
         </div>
-      </footer>
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="boton-categoria">
+      <a href="html/categoria.html">Categorias</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <!-- Aviso Legal -->
+      <div class="footer-section">
+        <h4>Aviso Legal</h4>
+        <p>Todos nuestros productos pertenencen a nuestra marca registrada, el plagio y venta no autorizada sera objeto de procesos legales. Con derecho reservado a la no distribucion para aquellas personas que no cumplan con nuestros terminos.</p>
+        <a href="aviso-legal.html">Leer más</a>
+      </div>
+  
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <p>Teléfono: <a href="tel:+123456789">+123 456 789</a></p>
+        <p>Email: <a href="mailto:Foote@fvecomp.com">Foote&#64;footecomp.com </a></p>
+      </div>
+  
+      <!-- Mapa -->
+      <div class="footer-section">
+        <h4>Encuéntranos</h4>
+        <div class="img-redes">
+          @footecomp
+          <img src="imgs/tiktok.png" alt="tiktok logo">
+          @footecomp
+          <img src="imgs/logo marron.png" alt="instagram logo">
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 Tienda de Ropa Foote. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+// Script para el menú lateral
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const sidebar = document.querySelector('.sidebar');
+  const sidebarClose = document.querySelector('.sidebar-close');
+  const sidebarOverlay = document.querySelector('.sidebar-overlay');
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  
+  // Abrir menú lateral
+  menuToggle.addEventListener('click', function() {
+    sidebar.classList.add('active');
+    sidebarOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Previene scroll
+  });
+  
+  // Cerrar menú lateral
+  sidebarClose.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Permite scroll
+  });
+  
+  sidebarOverlay.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Permite scroll
+  });
+  
+  // Manejo de submenús c
+  dropdownToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.classList.toggle('active');
+      const dropdownMenu = this.nextElementSibling;
       
+      // Si está cerrado, ábrelo calculando la altura correcta
+      if (!dropdownMenu.style.maxHeight || dropdownMenu.style.maxHeight === "0px") {
+        // Calculamos la altura total del contenido del submenú
+        const height = Array.from(dropdownMenu.children)
+          .reduce((total, child) => total + child.offsetHeight, 0);
+        
+        dropdownMenu.style.maxHeight = height + "px";
+      } else {
+        // Si está abierto, ciérralo
+        dropdownMenu.style.maxHeight = "0px";
+      }
+    });
+  });
+  
+  // Modal de registro
+  const showRegister = document.getElementById('show-register');
+  const registerModal = document.getElementById('register-modal');
+  const modalClose = document.querySelector('.modal-close');
+  
+  if (showRegister && registerModal && modalClose) {
+    showRegister.addEventListener('click', function() {
+      registerModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
+    });
     
-      <script src="script.js"></script>
-    </body>
-     </html>
+    modalClose.addEventListener('click', function() {
+      registerModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
     
+    // Cerrar modal al hacer clic fuera del formulario
+    registerModal.addEventListener('click', function(e) {
+      if (e.target === registerModal) {
+        registerModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+});
+  </script>
+</body>
+</html>
