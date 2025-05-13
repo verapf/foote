@@ -18,52 +18,54 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Header con logo, menú hamburguesa, carrito y usuario -->
+  <!-- Header con logo, carrito y usuario -->
   <header>
     <div class="header-container">
       <!-- Botón para menú lateral -->
       <div class="menu-toggle">
-        <i class="fas fa-bars"></i>
+        <img src="FootE (3) - copia/Header/Menu desplegable.png" alt="menu desplegable" width="100px">
       </div>
       
       <!-- Logo centrado -->
       <div class="logo">
-        <img src="imgs/logo.png" alt="Logo de la tienda">
+        <img src="FootE (3) - copia/Header/Logo (2).png" alt="Logo de la tienda" width="200px">
       </div>
       
       <!-- Iconos de usuario y carrito -->
       <div class="header-icons">
         <div class="cart-icon">
-          <i class="fas fa-shopping-cart"></i>
+          <img src="FootE (3) - copia/Header/Carrito.png" alt="carrito" width="80px">
           <span class="cart-count">0</span>
         </div>
         <div class="user-icon">
-          <i class="fas fa-user-circle"></i>
+          <img src="FootE (3) - copia/Header/Usuario.png" alt="Usuario" width="80px">
         </div>
       </div>
     </div>
 
-    <!-- Menú lateral (desplegable) -->
-    <nav class="sidebar">
+   <!-- Menú lateral (desplegable) -->
+   <nav class="sidebar">
+    <div class="menu-header">
+      <div class="menu-title">Menú</div>
       <div class="sidebar-close">
-        <i class="fas fa-times"></i>
+        <img src="FootE (3) - copia/Menu desplegable/Flecha.png" alt="flecha cierra menu">
       </div>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropdown-toggle">Categorías <i class="fas fa-chevron-down"></i></a>
-          <li><a href="html/categoria.html"></a></li>
-            <ul class="dropdown-menu">
-              <li><a href="html/categoria.html">Hombres</a></li>
-              <li><a href="html/categoria.html">Mujeres</a></li>
-              <li><a href="html/categoria.html">Niños</a></li>
-            </ul>
-        </li>
-        <li><a href="html/quienes_somos.html">Sobre Nosotros</a></li>
-        <li><a href="html/blog.html">Blog</a></li>
-        <li><a href="html/contactanos.html">Contacto</a></li>
-      </ul>
-    </nav>
+    </div>
+    <ul>
+      <li><a href="index.html">INICIO</a></li>
+      <li class="dropdown">
+        <a href="html/categoria.html">CATEGORIAS <i class="fas fa-chevron-right"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="html/categoria.html">Hombres</a></li>
+          <li><a href="html/categoria.html">Mujeres</a></li>
+          <li><a href="html/categoria.html">Niños</a></li>
+        </ul>
+      </li>
+      <li><a href="html/quienes_somos.html">SOBRE NOSOTROS</a></li>
+      <li><a href="html/blog.html">BLOG</a></li>
+      <li><a href="html/contactanos.html">CONTACTO</a></li>
+    </ul>
+  </nav>
     
     <!-- Overlay para cuando el menú lateral está abierto -->
     <div class="sidebar-overlay"></div>
@@ -124,15 +126,15 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <img src="imgs/1.png" alt="Los Angeles" style="width:100%;">
+          <img src="FootE (3) - copia/Inicio/Imagenes de inicio/1.png" alt="zapato1" style="width:100px;"height="200px">
         </div>
   
         <div class="item">
-          <img src="imgs/2.png" alt="Chicago" style="width:100%;">
+          <img src="FootE (3) - copia/Inicio/Imagenes de inicio/2.png" alt="Zapato2" style="width: 800px;"height="150px">
         </div>
       
         <div class="item">
-          <img src="imgs/3.png" alt="New york" style="width:100%;">
+          <img src="FootE (3) - copia/Inicio/Imagenes de inicio/3.png" alt="zapatos3" style="width:100px;" height="200px">
         </div>
       </div>
   
@@ -152,48 +154,61 @@
     </div>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-container">
-      <!-- Aviso Legal -->
+      <!-- Información -->
       <div class="footer-section">
-        <h4>Aviso Legal</h4>
-        <p>Todos nuestros productos pertenencen a nuestra marca registrada, el plagio y venta no autorizada sera objeto de procesos legales. Con derecho reservado a la no distribucion para aquellas personas que no cumplan con nuestros terminos.</p>
-        <a href="aviso-legal.html">Leer más</a>
+        <h3>Información</h3>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="politica-privacidad.html">Política de Privacidad</a>
+        <a href="politica-cookies.html">Política de Cookies</a>
+        <a href="condiciones-compra.html">Condiciones de Compra</a>
       </div>
-  
+      
       <!-- Contacto -->
       <div class="footer-section">
-        <h4>Contacto</h4>
-        <p>Teléfono: <a href="tel:+123456789">+123 456 789</a></p>
-        <p>Email: <a href="mailto:Foote@fvecomp.com">Foote&#64;footecomp.com </a></p>
+        <h3>Contacto</h3>
+        <div class="contact-item">
+          <span class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </span>
+          <a href="tel:+34964555555">+34 964 555 555</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <a href="mailto:info@foote.com">info@foote.com</a>
+        </div>
       </div>
-  
-      <!-- Mapa -->
+      
+      <!-- Síguenos -->
       <div class="footer-section">
-        <h4>Encuéntranos</h4>
-        <div class="img-redes">
-          @footecomp
-          <img src="imgs/tiktok.png" alt="tiktok logo">
-          @footecomp
-          <img src="imgs/logo marron.png" alt="instagram logo">
+        <h3>Síguenos</h3>
+        <div class="social-icons">
+          <div class="social-icon">
+            <img src="FootE (3) - copia/Footer/tiktok.png" alt="TikTok">
+            <span>@footecomp</span>
+          </div>
+          <div class="social-icon">
+            <img src="FootE (3) - copia/Footer/Instagram.png" alt="Instagram">
+            <span>@footecomp</span>
+          </div>
         </div>
       </div>
     </div>
-  
+    
     <div class="footer-bottom">
       <p>&copy; 2024 Tienda de Ropa Foote. Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <script>
-// Script para el menú lateral
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const sidebar = document.querySelector('.sidebar');
   const sidebarClose = document.querySelector('.sidebar-close');
   const sidebarOverlay = document.querySelector('.sidebar-overlay');
-  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
   
   // Abrir menú lateral
   menuToggle.addEventListener('click', function() {
@@ -214,28 +229,8 @@ document.addEventListener('DOMContentLoaded', function() {
     sidebarOverlay.classList.remove('active');
     document.body.style.overflow = ''; // Permite scroll
   });
-  
-  // Manejo de submenús c
-  dropdownToggles.forEach(function(toggle) {
-    toggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.classList.toggle('active');
-      const dropdownMenu = this.nextElementSibling;
-      
-      // Si está cerrado, ábrelo calculando la altura correcta
-      if (!dropdownMenu.style.maxHeight || dropdownMenu.style.maxHeight === "0px") {
-        // Calculamos la altura total del contenido del submenú
-        const height = Array.from(dropdownMenu.children)
-          .reduce((total, child) => total + child.offsetHeight, 0);
-        
-        dropdownMenu.style.maxHeight = height + "px";
-      } else {
-        // Si está abierto, ciérralo
-        dropdownMenu.style.maxHeight = "0px";
-      }
-    });
-  });
-  
+ });
+
   // Modal de registro
   const showRegister = document.getElementById('show-register');
   const registerModal = document.getElementById('register-modal');
@@ -260,7 +255,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-});
   </script>
 </body>
 </html>
