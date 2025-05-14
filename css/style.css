@@ -1088,3 +1088,244 @@ footer {
     background-color: #eaeaea;
     color: #40a900 !important;
   }
+
+  #myCarousel .item {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+#myCarousel .item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 400px; /* Mantiene la altura aproximada actual - ajusta según sea necesario */
+}
+
+/* Mejora los controles para que sean más visibles */
+#myCarousel .carousel-control {
+  background-image: none;
+  opacity: 0.7;
+}
+
+#myCarousel .carousel-control:hover {
+  opacity: 1;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  #myCarousel .item img {
+    max-height: 350px; /* Altura reducida para móviles */
+  }
+}
+/* Estilos para el botón de usuario y el modal de inicio de sesión */
+.user-icon {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.user-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Modal de inicio de sesión */
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.login-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.login-form {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.login-form h2 {
+  margin: 0 0 20px;
+  color: #333;
+  text-align: center;
+}
+
+.forgot-password {
+  display: block;
+  text-align: right;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #40a900;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  background-color: #40a900;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  background-color: #357e00;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.register-link a {
+  color: #40a900;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+/* Estilos para el popup de bienvenida */
+.welcome-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.welcome-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.welcome-content {
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(66, 36, 27, 0.7);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.popup-close:hover {
+  background-color: #42241b;
+}
+
+.popup-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.popup-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.popup-text {
+  padding: 25px;
+  text-align: center;
+}
+
+.popup-text h2 {
+  margin: 0 0 15px;
+  color: #42241b;
+  font-size: 24px;
+}
+
+.popup-text p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.popup-text button {
+  background-color: #40a900;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.popup-text button:hover {
+  background-color: #357e00;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .welcome-content {
+    flex-direction: row;
+    max-height: 400px;
+  }
+  
+  .popup-image {
+    width: 50%;
+  }
+  
+  .popup-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

@@ -71,14 +71,22 @@
     <div class="sidebar-overlay"></div>
   </header>
 
-  <!-- Banner de registro con 20% descuento -->
-  <div class="promo-banner">
-    <div class="promo-content">
-      <h2>¡REGÍSTRATE AHORA!</h2>
-      <p>Obtén un 20% de descuento en tu primera compra</p>
-      <button id="show-register">REGISTRARME</button>
+<div id="welcome-popup" class="welcome-popup">
+  <div class="welcome-content">
+    <div class="popup-close">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="popup-image">
+      <img src="FootE (3) - copia/Inicio/Pop-up.png" alt="Imagen de bienvenida">
+      
+    </div>
+    <div class="popup-text">
+      <h2>¡Bienvenido a FootE Shop!</h2>
+      <p>Descubre nuestra nueva colección y obtén un 20% de descuento en tu primera compra al registrarte.</p>
+      <button id="popup-register-btn">REGISTRARME</button>
     </div>
   </div>
+</div>
 
   <!-- Formulario de registro (modal) -->
   <div class="register-modal" id="register-modal">
@@ -126,15 +134,15 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <img src="FootE (3) - copia/Inicio/Imagenes de inicio/1.png" alt="zapato1" style="width:100px;"height="200px">
+          <img src="FootE (3) - copia/Imagenes de inicio/Diseño sin título (2) (1)/1.jpg" alt="zapato1">
         </div>
   
         <div class="item">
-          <img src="FootE (3) - copia/Inicio/Imagenes de inicio/2.png" alt="Zapato2" style="width: 800px;"height="150px">
+          <img src="FootE (3) - copia/Imagenes de inicio/Diseño sin título (2) (1)/2.jpg" alt="Zapato2">
         </div>
       
         <div class="item">
-          <img src="FootE (3) - copia/Inicio/Imagenes de inicio/3.png" alt="zapatos3" style="width:100px;" height="200px">
+          <img src="FootE (3) - copia/Imagenes de inicio/Diseño sin título (2) (1)/3.jpg" alt="zapatos3">
         </div>
       </div>
   
@@ -153,7 +161,28 @@
       <a href="html/categoria.html">Categorias</a>
     </div>
   </main>
-
+<!-- Modal de inicio de sesión -->
+<div class="login-modal" id="login-modal">
+  <div class="login-form">
+    <div class="modal-close">
+      <i class="fas fa-times"></i>
+    </div>
+    <h2>Iniciar Sesión</h2>
+    <form id="login-form">
+      <div class="form-group">
+        <input type="email" id="login-email" name="email" placeholder="Correo electrónico" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="login-password" name="password" placeholder="Contraseña" required>
+      </div>
+      <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+      <button type="submit" class="login-btn">Iniciar Sesión</button>
+    </form>
+    <div class="register-link">
+      ¿No tienes cuenta? <a href="#">Regístrate aquí</a>
+    </div>
+  </div>
+</div>
   <footer>
     <div class="footer-container">
       <!-- Información -->
@@ -255,6 +284,114 @@
       }
     });
   }
+  document.addEventListener('DOMContentLoaded', function() {
+  // Elementos del modal de registro existente
+  const showRegister = document.getElementById('show-register');
+  const registerModal = document.getElementById('register-modal');
+  const registerModalClose = document.querySelector('#register-modal .modal-close');
+  
+  // Elementos del nuevo modal de inicio de sesión
+  const userIcon = document.querySelector('.user-icon');
+  const loginModal = document.getElementById('login-modal');
+  const loginModalClose = document.querySelector('#login-modal .modal-close');
+  
+  // Enlace para cambiar entre modales
+  const registerLink = document.querySelector('.register-link a');
+  const loginLink = document.querySelector('.login-link a');
+  
+  // Funcionalidad para mostrar/ocultar modal de registro (existente)
+  if (showRegister && registerModal && registerModalClose) {
+    showRegister.addEventListener('click', function() {
+      registerModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
+    });
+    
+    registerModalClose.addEventListener('click', function() {
+      registerModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
+    
+    // Cerrar modal de registro al hacer clic fuera del formulario
+    registerModal.addEventListener('click', function(e) {
+      if (e.target === registerModal) {
+        registerModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+  
+  // Funcionalidad para mostrar/ocultar modal de inicio de sesión (nuevo)
+  if (userIcon && loginModal && loginModalClose) {
+    userIcon.addEventListener('click', function() {
+      loginModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
+    });
+    
+    loginModalClose.addEventListener('click', function() {
+      loginModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
+    
+    // Cerrar modal de inicio de sesión al hacer clic fuera del formulario
+    loginModal.addEventListener('click', function(e) {
+      if (e.target === loginModal) {
+        loginModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+  
+  // Funcionalidad para cambiar entre modales
+  if (registerLink && loginModal && registerModal) {
+    registerLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      loginModal.classList.remove('active');
+      registerModal.classList.add('active');
+    });
+  }
+  
+  if (loginLink && loginModal && registerModal) {
+    loginLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      registerModal.classList.remove('active');
+      loginModal.classList.add('active');
+    });
+  }
+});
+// Código para el popup de bienvenida
+document.addEventListener('DOMContentLoaded', function() {
+  // Mostrar popup automáticamente al cargar la página
+  const welcomePopup = document.getElementById('welcome-popup');
+  const popupClose = document.querySelector('.popup-close');
+  const popupRegisterBtn = document.getElementById('popup-register-btn');
+  const registerModal = document.getElementById('register-modal');
+  
+  // Mostrar el popup después de 1 segundo para mejor experiencia de usuario
+  setTimeout(function() {
+    welcomePopup.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevenir scroll
+  }, 1000);
+  
+  // Cerrar el popup
+  popupClose.addEventListener('click', function() {
+    welcomePopup.classList.remove('active');
+    document.body.style.overflow = ''; // Permitir scroll
+  });
+  
+  // Cerrar popup al hacer clic fuera del contenido
+  welcomePopup.addEventListener('click', function(e) {
+    if (e.target === welcomePopup) {
+      welcomePopup.classList.remove('active');
+      document.body.style.overflow = ''; // Permitir scroll
+    }
+  });
+  
+  // Botón de registro en el popup abre el modal de registro
+  popupRegisterBtn.addEventListener('click', function() {
+    welcomePopup.classList.remove('active');
+    registerModal.classList.add('active');
+  });
+});
   </script>
 </body>
 </html>
