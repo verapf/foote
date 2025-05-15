@@ -2,11 +2,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('../imgs/fondoFoote.png');
+    background-image: url('');
   }
 
   .imagenFondoFoote {
-    background-image: url('../imgs/fondoFoote.png'); /* Ruta relativa a la imagen */
+    background-image: url(); /* Ruta relativa a la imagen */
     background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evitar que la imagen se repita */
     background-position: center; /* Centrar la imagen de fondo */
@@ -28,8 +28,8 @@ body {
 
 
 .logo {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,8 +116,17 @@ body {
    margin-left: 30%;
 
  }
-  
-/* Rejilla de productos */
+ .section-name {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #40a900; /* Color verde de FootE */
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
 /* Rejilla de productos */
 .product-grid {
   display: grid;
@@ -479,9 +488,7 @@ tfoot {
   height: 30px;
 }
 /* FONDO CATEGORÍAS
-.fondo-productos{
-  background-color: #42241b;
-}
+
 */
 .boton-categoria {
   margin-top: 2%;
@@ -553,8 +560,8 @@ header {
   cursor: pointer;
   color: white;
   transition: 0.3s;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
 }
@@ -571,7 +578,7 @@ header {
 }
 
 .logo img {
-  width: 200px;
+  width: 300px;
   height: auto;
 }
 
@@ -685,20 +692,20 @@ header {
 .sidebar ul li a {
   display: block;
   padding: 15px 20px; 
-  color: #42241b;
+  color: #40a900;
   text-decoration: none;
   transition: 0.3s;
   font-weight: bold;
 }
 
 .sidebar ul > li > a {
-  color: #40a900;
+  color: #42241b;
   font-weight: bold;
 }
 
 .sidebar ul li a:hover {
   background-color: #f8f8f8;
-  color: #42241b;
+  color: #40a900;
 }
 /* Estilo para el elemento que contiene el submenú */
 .sidebar ul li.dropdown {
@@ -1234,15 +1241,11 @@ footer {
 }
 
 .welcome-content {
-  background-color: white;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 800px;
   position: relative;
+  max-width: 600px; /* Ajusta según el tamaño de tu imagen */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 .popup-close {
@@ -1268,8 +1271,8 @@ footer {
 }
 
 .popup-image {
+  position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 .popup-image img {
@@ -1278,23 +1281,11 @@ footer {
   display: block;
 }
 
-.popup-text {
-  padding: 25px;
-  text-align: center;
-}
-
-.popup-text h2 {
-  margin: 0 0 15px;
-  color: #42241b;
-  font-size: 24px;
-}
-
-.popup-text p {
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.popup-text button {
+#popup-register-btn {
+  position: absolute;
+  top: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #40a900;
   color: white;
   border: none;
@@ -1304,11 +1295,12 @@ footer {
   cursor: pointer;
   transition: 0.3s;
   font-size: 16px;
+  z-index: 5;
 }
 
-.popup-text button:hover {
+#popup-register-btn:hover {
   background-color: #357e00;
-  transform: translateY(-2px);
+  transform: translateX(-50%) translateY(-2px);
 }
 
 /* Responsive */
@@ -1316,16 +1308,5 @@ footer {
   .welcome-content {
     flex-direction: row;
     max-height: 400px;
-  }
-  
-  .popup-image {
-    width: 50%;
-  }
-  
-  .popup-text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 }
