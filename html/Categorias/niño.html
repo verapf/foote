@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="author" content="Carlos ,Vera Pitarch, Hugo Vidal">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foote Shop</title>
+  <title>Foote Shop - Niños</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,74 +12,139 @@
   <link rel="stylesheet" href="../../css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+  <!-- Header con estilo del mockup -->
   <header>
     <div class="header-container">
-      <!-- Botón para menú lateral -->
-      <div class="menu-toggle">
-        <img src="../../FootE (3) - copia/Header/Menu desplegable.png" alt="menu desplegable" width="60px">
-      </div>
-      
-      <div class="section-name">NIÑO</div>
-      
-      <!-- Logo centrado -->
-      <div class="logo">
-        <img src="../../FootE (3) - copia/Header/Logo (2).png" alt="Logo de la tienda" width="200px">
-      </div>
-         <div class="eslogan">
-        Camina hacia un paso mejor
-      </div>
-      <!-- Iconos de usuario y carrito -->
-      <div class="header-icons">
-        <div class="cart-icon">
-          <img src="../../FootE (3) - copia/Header/Carrito.png" alt="carrito" width="80px">
-          <span class="cart-count">0</span>
-        </div>
-        <div class="user-icon">
-          <img src="../../FootE (3) - copia/Header/Usuario.png" alt="Usuario" width="80px">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-3 header-left">
+            <div class="menu-icon">
+              <img src="../../FootE (3) - copia/Header/Menu desplegable.png" alt="menu">
+            </div>
+            <span class="category-text">Niños</span>
+          </div>
+          <div class="col-md-6 header-center">
+            <div class="logo">
+              <img src="../../FootE (3) - copia/Header/Logo (2).png" alt="Logo de la tienda">
+            </div>
+            <div class="eslogan">
+              Camina hacia un futuro mejor
+            </div>
+          </div>
+          <div class="col-md-3 header-right">
+            <div class="cart-icon me-4">
+              <img src="../../FootE (3) - copia/Header/Carrito.png" alt="carrito">
+            </div>
+            <div class="user-icon">
+              <img src="../../FootE (3) - copia/Header/Usuario.png" alt="Usuario">
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-   <!-- Menú lateral (desplegable) -->
-   <nav class="sidebar">
-    <div class="menu-header">
-      <div class="menu-title">Menú</div>
-      <div class="sidebar-close">
-        <img src="../../FootE (3) - copia/Menu desplegable/Flecha.png" alt="flecha cierra menu">
+    <!-- Menú lateral (desplegable) -->
+    <nav class="sidebar">
+      <div class="menu-header">
+        <div class="menu-title">Menú</div>
+        <div class="sidebar-close">
+          <img src="../../FootE (3) - copia/Menu desplegable/Flecha.png" alt="flecha cierra menu">
+        </div>
       </div>
-    </div>
-    <ul>
-      <li><a href="../../index.html">INICIO</a></li>
-      <li class="dropdown">
-        <a href="../../html/categoria.html">CATEGORIAS <i class="fas fa-chevron-right"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="../../html/Categorias/hombre.html">Hombres</a></li>
-          <li><a href="../../html/Categorias/mujer.html">Mujeres</a></li>
-          <li><a href="../../html/Categorias/niño.html">Niños</a></li>
-        </ul>
-      </li>
-      <li><a href="../../html/quienes_somos.html">SOBRE NOSOTROS</a></li>
-      <li><a href="../../html/blog.html">BLOG</a></li>
-      <li><a href="../../html/contactanos.html">CONTACTO</a></li>
-    </ul>
-  </nav>
+      <ul>
+        <li><a href="../../index.html">INICIO</a></li>
+        <li class="dropdown">
+          <a href="../../html/categoria.html">CATEGORIAS <i class="fas fa-chevron-right"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="../../html/Categorias/hombre.html">Hombres</a></li>
+            <li><a href="../../html/Categorias/mujer.html">Mujeres</a></li>
+            <li><a href="../../html/Categorias/niño.html">Niños</a></li>
+          </ul>
+        </li>
+        <li><a href="../../html/quienes_somos.html">SOBRE NOSOTROS</a></li>
+        <li><a href="../../html/blog.html">BLOG</a></li>
+        <li><a href="../../html/contactanos.html">CONTACTO</a></li>
+      </ul>
+    </nav>
     
     <!-- Overlay para cuando el menú lateral está abierto -->
     <div class="sidebar-overlay"></div>
   </header>
 
-  <main>
-    <!-- Contenido principal de la página -->
-    <h1>Categoría Niños</h1>
-    <p>Explora nuestra colección de calzado para niños.</p>
+  <main class="imagenFondoFoote">
+    <h1 class="page-title">Colección para Niños</h1>
+    
+    <div class="product-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <img src="../../imgs/zapatillas-niñi.png" alt="Zapato Mini">
+        <div class="product-name">Mini</div>
+        <div class="product-price">79.99€</div>
+        <div class="button-group">
+          <button class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <button class="fav-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <button class="personalize-btn">Personalizar</button>
+      </div>
+      
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <img src="../../imgs/zapatillas-niño.png" alt="Zapato Peque">
+        <div class="product-name">Peque</div>
+        <div class="product-price">79.99€</div>
+        <div class="button-group">
+          <button class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <button class="fav-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <button class="personalize-btn">Personalizar</button>
+      </div>
+      
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <img src="../../imgs/zapatillas-niñi.png" alt="Zapato Chiqui">
+        <div class="product-name">Chiqui</div>
+        <div class="product-price">79.99€</div>
+        <div class="button-group">
+          <button class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <button class="fav-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <button class="personalize-btn">Personalizar</button>
+      </div>
+      
+      <!-- Producto 4 -->
+      <div class="product-card">
+        <img src="../../imgs/zapatillas-niño.png" alt="Zapato Junior">
+        <div class="product-name">Junior</div>
+        <div class="product-price">79.99€</div>
+        <div class="button-group">
+          <button class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <button class="fav-btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <button class="personalize-btn">Personalizar</button>
+      </div>
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <!-- Información -->
@@ -114,11 +179,9 @@
         <div class="social-icons">
           <div class="social-icon">
             <img src="../../FootE (3) - copia/Footer/tiktok.png" alt="TikTok">
-            
           </div>
           <div class="social-icon">
             <img src="../../FootE (3) - copia/Footer/Instagram.png" alt="Instagram">
-          
           </div>
         </div>
       </div>
@@ -131,7 +194,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const menuToggle = document.querySelector('.menu-toggle');
+      const menuToggle = document.querySelector('.menu-icon');
       const sidebar = document.querySelector('.sidebar');
       const sidebarClose = document.querySelector('.sidebar-close');
       const sidebarOverlay = document.querySelector('.sidebar-overlay');
@@ -155,7 +218,45 @@
         sidebarOverlay.classList.remove('active');
         document.body.style.overflow = ''; // Permite scroll
       });
+      
+      // Cambiar el icono de favoritos al hacer clic
+      const favButtons = document.querySelectorAll('.fav-btn');
+      favButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const icon = this.querySelector('i');
+          if (icon.classList.contains('far')) {
+            icon.classList.remove('far');
+            icon.classList.add('fas');
+          } else {
+            icon.classList.remove('fas');
+            icon.classList.add('far');
+          }
+        });
+      });
+      
+      // Añadir funcionalidad al botón de carrito
+      const cartButtons = document.querySelectorAll('.cart-btn');
+      cartButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const productCard = this.closest('.product-card');
+          const productName = productCard.querySelector('.product-name').textContent;
+          alert(`¡${productName} añadido al carrito!`);
+        });
+      });
+      
+      // Añadir funcionalidad al botón de personalizar
+      const personalizeButtons = document.querySelectorAll('.personalize-btn');
+      personalizeButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const productCard = this.closest('.product-card');
+          const productName = productCard.querySelector('.product-name').textContent;
+          alert(`Personalización de ${productName} - Próximamente`);
+        });
+      });
     });
   </script>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/cart.js"></script>
+  <script src="../../js/favorites.js"></script>
 </body>
 </html>

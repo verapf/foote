@@ -1,0 +1,113 @@
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.faq-section {
+  margin-bottom: 50px;
+}
+
+.faq-title {
+  font-size: 1.5rem;
+  color: #5d2e1e;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  background-color: #7fd13b;
+  color: #5d2e1e;
+  padding: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.faq-answer {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  display: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.contact-form-container {
+  background-color: #5d2e1e;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.submit-btn {
+  background-color: #7fd13b;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #6ab82f;
+}
+
+.reset-btn {
+  background-color: #999;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #777;
+}

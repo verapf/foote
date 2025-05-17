@@ -1,0 +1,137 @@
+.hero {
+  background-color: #7fd13b;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #5d2e1e;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.sustainable-text {
+  text-align: center;
+  background-color: #5d2e1e;
+  color: #7fd13b;
+  padding: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.catalog-btn-container {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.catalog-btn {
+  display: inline-block;
+  background-color: #7fd13b;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.catalog-btn:hover {
+  background-color: #6ab82f;
+}
+
+/* Popup de bienvenida */
+.welcome-popup {
+  background-color: #7fd13b;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-title {
+  font-size: 2.5rem;
+  color: #5d2e1e;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.popup-content {
+  color: #5d2e1e;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.popup-badge {
+  background-color: #5d2e1e;
+  color: #7fd13b;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 auto 20px;
+  border: 3px solid white;
+  position: relative;
+}
+
+.popup-badge::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid #5d2e1e;
+  border-radius: 50%;
+}
+
+.register-btn {
+  background-color: #5d2e1e;
+  color: #7fd13b;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #4a2518;
+}
