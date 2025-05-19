@@ -167,33 +167,132 @@
   
 
   <script src="script.js"></script>
-  <script>
+ <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const sidebar = document.querySelector('.sidebar');
-      const sidebarClose = document.querySelector('.sidebar-close');
-      const sidebarOverlay = document.querySelector('.sidebar-overlay');
-      
-      // Abrir menú lateral
-      menuToggle.addEventListener('click', function() {
-        sidebar.classList.add('active');
-        sidebarOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Previene scroll
-      });
-      
-      // Cerrar menú lateral
-      sidebarClose.addEventListener('click', function() {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Permite scroll
-      });
-      
-      sidebarOverlay.addEventListener('click', function() {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Permite scroll
-      });
+  const menuToggle = document.querySelector('.menu-toggle');
+  const sidebar = document.querySelector('.sidebar');
+  const sidebarClose = document.querySelector('.sidebar-close');
+  const sidebarOverlay = document.querySelector('.sidebar-overlay');
+  
+  // Abrir menú lateral
+  menuToggle.addEventListener('click', function() {
+    sidebar.classList.add('active');
+    sidebarOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Previene scroll
+  });
+  
+  // Cerrar menú lateral
+  sidebarClose.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Permite scroll
+  });
+  
+  sidebarOverlay.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Permite scroll
+  });
+ });
+
+  // Modal de registro
+  const showRegister = document.getElementById('show-register');
+  const registerModal = document.getElementById('register-modal');
+  const modalClose = document.querySelector('.modal-close');
+  
+  if (showRegister && registerModal && modalClose) {
+    showRegister.addEventListener('click', function() {
+      registerModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
     });
-  </script>
+    
+    modalClose.addEventListener('click', function() {
+      registerModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
+    
+    // Cerrar modal al hacer clic fuera del formulario
+    registerModal.addEventListener('click', function(e) {
+      if (e.target === registerModal) {
+        registerModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+  // Elementos del modal de registro existente
+  const showRegister = document.getElementById('show-register');
+  const registerModal = document.getElementById('register-modal');
+  const registerModalClose = document.querySelector('#register-modal .modal-close');
+  
+  // Elementos del nuevo modal de inicio de sesión
+  const userIcon = document.querySelector('.user-icon');
+  const loginModal = document.getElementById('login-modal');
+  const loginModalClose = document.querySelector('#login-modal .modal-close');
+  
+  // Enlace para cambiar entre modales
+  const registerLink = document.querySelector('.register-link a');
+  const loginLink = document.querySelector('.login-link a');
+  
+  // Funcionalidad para mostrar/ocultar modal de registro (existente)
+  if (showRegister && registerModal && registerModalClose) {
+    showRegister.addEventListener('click', function() {
+      registerModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
+    });
+    
+    registerModalClose.addEventListener('click', function() {
+      registerModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
+    
+    // Cerrar modal de registro al hacer clic fuera del formulario
+    registerModal.addEventListener('click', function(e) {
+      if (e.target === registerModal) {
+        registerModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+  
+  // Funcionalidad para mostrar/ocultar modal de inicio de sesión (nuevo)
+  if (userIcon && loginModal && loginModalClose) {
+    userIcon.addEventListener('click', function() {
+      loginModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
+    });
+    
+    loginModalClose.addEventListener('click', function() {
+      loginModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
+    
+    // Cerrar modal de inicio de sesión al hacer clic fuera del formulario
+    loginModal.addEventListener('click', function(e) {
+      if (e.target === loginModal) {
+        loginModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+  
+  // Funcionalidad para cambiar entre modales
+  if (registerLink && loginModal && registerModal) {
+    registerLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      loginModal.classList.remove('active');
+      registerModal.classList.add('active');
+    });
+  }
+  
+  if (loginLink && loginModal && registerModal) {
+    loginLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      registerModal.classList.remove('active');
+      loginModal.classList.add('active');
+    });
+  }
+});
+</script>
 </body>
 </html>

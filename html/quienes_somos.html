@@ -75,32 +75,50 @@
     <div class="sidebar-overlay"></div>
   </header>
 
-  <!-- Main con productos -->
-  <main>
-    <section>
-        <h1>Sobre Nosotros</h1>
-        <p>
-          La actividad empresarial de FootE es la producción y comercialización de calzado ecológico, brindando artículos sostenibles y responsables con el entorno natural. Utilizamos materiales reciclados, biodegradables y naturales para fabricar zapatillas que son cómodas, resistentes y respetuosas con el medio ambiente. También nos distingue el hecho de brindar a nuestros clientes la posibilidad de personalizar sus zapatillas, lo cual les permite seleccionar colores, diseños y detalles exclusivos según sus gustos personales.
-
-
-        </p>
-        <h2>Misión</h2>
-        <p>
-          Ofrecer calzado sostenible, combinando el estilo, el confort y la responsabilidad ambiental
-        </p>
-        <h2>Visión</h2>
-        <p>
-        Inspirar a la población hacia un estilo de vida más consciente y responsable
-        </p>
-        <h2> Nuestra Historia</h2>
-        <p>
-          
-        FootE es una empresa dirigida por,Carlos Fernández Bonet dueño y fundador de la empresa desde el año 2024, cuenta con una amplia experiencia en el sector de las zapatillas más de 7 años, debido a su pasado como técnico de marketing en otras empresas como Nike
-
-        </p>
-        
-        
+ <main>
+    <div class="about-us-container">
+      <section class="about-section">
+        <h1 class="about-title">HISTORIA</h1>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Foote nació cuando un septiembre de 2024, su fundador decidió dar un paso más allá en el mundo de las zapatillas, ya que el planeta estaba pidiendo un cambio, así que se decidió crear una marca de zapatillas que redujera la contaminación del planeta, pero sin dejar de lado el estilo propio de cada una de las personas que confíen en llevar unas zapatillas FootE
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="/FootE (3) - copia/Sobre nosotros/1.png" alt="Manos sosteniendo una planta" class="about-img">
+          </div>
+        </div>
       </section>
+
+      <section class="about-section">
+        <h1 class="about-title">COMPROMISO AMBIENTAL</h1>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="/FootE (3) - copia/Sobre nosotros/2.png" alt="Bosque sostenible" class="about-img">
+          </div>
+          <div class="about-text">
+            <p>
+              En FootE utilizamos materiales reciclados, biodegradables y naturales para fabricar zapatillas que son cómodas, resistentes y respetuosas con el medio ambiente, de esta manera, conseguimos reducir la contaminación del planeta, obteniendo así, un mundo más sostenible y una población más concienciada
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h1 class="about-title">MISIÓN Y VISIÓN</h1>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Nuestra misión es ofrecer calzado sostenible, combinando el estilo, el confort y la responsabilidad ambiental y nuestra visión es inspirar a la población hacia un estilo de vida más consciente y responsable
+            </p>
+          </div>
+          <div class="about-image">
+            <img src="/FootE (3) - copia/Sobre nosotros/3.png" alt="Brote de planta" class="about-img">
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -155,33 +173,132 @@
   
 
   <script src="script.js"></script>
-  <script>
+ <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const sidebar = document.querySelector('.sidebar');
-      const sidebarClose = document.querySelector('.sidebar-close');
-      const sidebarOverlay = document.querySelector('.sidebar-overlay');
-      
-      // Abrir menú lateral
-      menuToggle.addEventListener('click', function() {
-        sidebar.classList.add('active');
-        sidebarOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Previene scroll
-      });
-      
-      // Cerrar menú lateral
-      sidebarClose.addEventListener('click', function() {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Permite scroll
-      });
-      
-      sidebarOverlay.addEventListener('click', function() {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Permite scroll
-      });
+  const menuToggle = document.querySelector('.menu-toggle');
+  const sidebar = document.querySelector('.sidebar');
+  const sidebarClose = document.querySelector('.sidebar-close');
+  const sidebarOverlay = document.querySelector('.sidebar-overlay');
+  
+  // Abrir menú lateral
+  menuToggle.addEventListener('click', function() {
+    sidebar.classList.add('active');
+    sidebarOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Previene scroll
+  });
+  
+  // Cerrar menú lateral
+  sidebarClose.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Permite scroll
+  });
+  
+  sidebarOverlay.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Permite scroll
+  });
+ });
+
+  // Modal de registro
+  const showRegister = document.getElementById('show-register');
+  const registerModal = document.getElementById('register-modal');
+  const modalClose = document.querySelector('.modal-close');
+  
+  if (showRegister && registerModal && modalClose) {
+    showRegister.addEventListener('click', function() {
+      registerModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
     });
-  </script>
+    
+    modalClose.addEventListener('click', function() {
+      registerModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
+    
+    // Cerrar modal al hacer clic fuera del formulario
+    registerModal.addEventListener('click', function(e) {
+      if (e.target === registerModal) {
+        registerModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+  // Elementos del modal de registro existente
+  const showRegister = document.getElementById('show-register');
+  const registerModal = document.getElementById('register-modal');
+  const registerModalClose = document.querySelector('#register-modal .modal-close');
+  
+  // Elementos del nuevo modal de inicio de sesión
+  const userIcon = document.querySelector('.user-icon');
+  const loginModal = document.getElementById('login-modal');
+  const loginModalClose = document.querySelector('#login-modal .modal-close');
+  
+  // Enlace para cambiar entre modales
+  const registerLink = document.querySelector('.register-link a');
+  const loginLink = document.querySelector('.login-link a');
+  
+  // Funcionalidad para mostrar/ocultar modal de registro (existente)
+  if (showRegister && registerModal && registerModalClose) {
+    showRegister.addEventListener('click', function() {
+      registerModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
+    });
+    
+    registerModalClose.addEventListener('click', function() {
+      registerModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
+    
+    // Cerrar modal de registro al hacer clic fuera del formulario
+    registerModal.addEventListener('click', function(e) {
+      if (e.target === registerModal) {
+        registerModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+  
+  // Funcionalidad para mostrar/ocultar modal de inicio de sesión (nuevo)
+  if (userIcon && loginModal && loginModalClose) {
+    userIcon.addEventListener('click', function() {
+      loginModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
+    });
+    
+    loginModalClose.addEventListener('click', function() {
+      loginModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
+    
+    // Cerrar modal de inicio de sesión al hacer clic fuera del formulario
+    loginModal.addEventListener('click', function(e) {
+      if (e.target === loginModal) {
+        loginModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+  
+  // Funcionalidad para cambiar entre modales
+  if (registerLink && loginModal && registerModal) {
+    registerLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      loginModal.classList.remove('active');
+      registerModal.classList.add('active');
+    });
+  }
+  
+  if (loginLink && loginModal && registerModal) {
+    loginLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      registerModal.classList.remove('active');
+      loginModal.classList.add('active');
+    });
+  }
+});
+</script>
 </body>
 </html>

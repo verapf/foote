@@ -75,36 +75,63 @@
     <div class="sidebar-overlay"></div>
   </header>
 
-  <!-- Main con Blog sobre noticias de zapaptillas -->
-  <div class="contenedor-main">
+  <!-- Main con entradas de blog -->
+<main>
+  <div class="blog-container">
+    <article class="blog-entry">
+      <div class="blog-date">05/04/2025</div>
+      <div class="blog-content">
+        <div class="blog-image">
+          <img src="../FootE (3) - copia/Blog/paisaje.jpg" alt="Paisaje">
+        </div>
+        <div class="blog-text">
+          <h2 class="blog-title">Título</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </article>
 
-    <h2>Blog Noticiero</h2>
+    <article class="blog-entry">
+      <div class="blog-date">05/03/2025</div>
+      <div class="blog-content">
+        <div class="blog-image">
+          <img src="../FootE (3) - copia/Blog/paisaje.jpg" alt="Paisaje">
+        </div>
+        <div class="blog-text">
+          <h2 class="blog-title">Título</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </article>
 
-    <div class="contenedor-columnas-blog">
+    <article class="blog-entry">
+      <div class="blog-date">05/02/2025</div>
+      <div class="blog-content">
+        <div class="blog-image">
+          <img src="../FootE (3) - copia/Blog/paisaje.jpg" alt="Paisaje">
+        </div>
+        <div class="blog-text">
+          <h2 class="blog-title">Título</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </article>
 
-      <div class="blog-block ">
-        <h3><b>Dia 28/01/2025</b></h3>
-          <p>De los estilos más técnicos a los modelos más retro y combinables para el día a día, no podemos vivir sin las sneakers, especialmente las que las hemos integrado en todo tipo de registros. Estas son las tendencias en zapatillas deportivas que importarán este 2025 y que ya vienen declinando con actitud las insiders de la industria.
-          </p>
-      </div> 
-
-      <div class="blog-block ">
-        <h3><b>Dia 29/01/2025</b></h3>
-          <p>
-            Las zapatillas han evolucionado hasta convertirse en una opción viable para la oficina, combinando comodidad y diseño sofisticado. Ya no es necesario sufrir con zapatos de vestir rígidos o incómodos durante la jornada laboral. Existen modelos que ofrecen suela acolchada, materiales flexibles y un diseño elegante para mantener una apariencia profesional sin sacrificar el bienestar de tus pies.
-          </p>
-      </div> 
-
-      <div class="blog-block  ">
-        <h3><b>Dia 30/01/2025</b></h3>
-          <p>¿Qué son las zapatillas veganas?
-            Las zapatillas veganas son aquellas que están confeccionadas sin utilizar materiales de origen animal en su fabricación. Esto incluye todo, desde el cuero, la lana, la seda, hasta los pegamentos o tintes que puedan contener componentes de animales.
-          </p>
-      </div> 
-
-    </div>
-
+    <article class="blog-entry">
+      <div class="blog-date">05/01/2025</div>
+      <div class="blog-content">
+        <div class="blog-image">
+          <img src="" alt="Paisaje">
+        </div>
+        <div class="blog-text">
+          <h2 class="blog-title">Título</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </article>
   </div>
+</main>
+
 
   <!-- Footer  -->
   <footer>
@@ -158,33 +185,132 @@
   
 
   <script src="script.js"></script>
-  <script>
+ <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const sidebar = document.querySelector('.sidebar');
-      const sidebarClose = document.querySelector('.sidebar-close');
-      const sidebarOverlay = document.querySelector('.sidebar-overlay');
-      
-      // Abrir menú lateral
-      menuToggle.addEventListener('click', function() {
-        sidebar.classList.add('active');
-        sidebarOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Previene scroll
-      });
-      
-      // Cerrar menú lateral
-      sidebarClose.addEventListener('click', function() {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Permite scroll
-      });
-      
-      sidebarOverlay.addEventListener('click', function() {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Permite scroll
-      });
+  const menuToggle = document.querySelector('.menu-toggle');
+  const sidebar = document.querySelector('.sidebar');
+  const sidebarClose = document.querySelector('.sidebar-close');
+  const sidebarOverlay = document.querySelector('.sidebar-overlay');
+  
+  // Abrir menú lateral
+  menuToggle.addEventListener('click', function() {
+    sidebar.classList.add('active');
+    sidebarOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Previene scroll
+  });
+  
+  // Cerrar menú lateral
+  sidebarClose.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Permite scroll
+  });
+  
+  sidebarOverlay.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Permite scroll
+  });
+ });
+
+  // Modal de registro
+  const showRegister = document.getElementById('show-register');
+  const registerModal = document.getElementById('register-modal');
+  const modalClose = document.querySelector('.modal-close');
+  
+  if (showRegister && registerModal && modalClose) {
+    showRegister.addEventListener('click', function() {
+      registerModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
     });
-  </script>
+    
+    modalClose.addEventListener('click', function() {
+      registerModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
+    
+    // Cerrar modal al hacer clic fuera del formulario
+    registerModal.addEventListener('click', function(e) {
+      if (e.target === registerModal) {
+        registerModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+  // Elementos del modal de registro existente
+  const showRegister = document.getElementById('show-register');
+  const registerModal = document.getElementById('register-modal');
+  const registerModalClose = document.querySelector('#register-modal .modal-close');
+  
+  // Elementos del nuevo modal de inicio de sesión
+  const userIcon = document.querySelector('.user-icon');
+  const loginModal = document.getElementById('login-modal');
+  const loginModalClose = document.querySelector('#login-modal .modal-close');
+  
+  // Enlace para cambiar entre modales
+  const registerLink = document.querySelector('.register-link a');
+  const loginLink = document.querySelector('.login-link a');
+  
+  // Funcionalidad para mostrar/ocultar modal de registro (existente)
+  if (showRegister && registerModal && registerModalClose) {
+    showRegister.addEventListener('click', function() {
+      registerModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
+    });
+    
+    registerModalClose.addEventListener('click', function() {
+      registerModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
+    
+    // Cerrar modal de registro al hacer clic fuera del formulario
+    registerModal.addEventListener('click', function(e) {
+      if (e.target === registerModal) {
+        registerModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+  
+  // Funcionalidad para mostrar/ocultar modal de inicio de sesión (nuevo)
+  if (userIcon && loginModal && loginModalClose) {
+    userIcon.addEventListener('click', function() {
+      loginModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previene scroll
+    });
+    
+    loginModalClose.addEventListener('click', function() {
+      loginModal.classList.remove('active');
+      document.body.style.overflow = ''; // Permite scroll
+    });
+    
+    // Cerrar modal de inicio de sesión al hacer clic fuera del formulario
+    loginModal.addEventListener('click', function(e) {
+      if (e.target === loginModal) {
+        loginModal.classList.remove('active');
+        document.body.style.overflow = ''; // Permite scroll
+      }
+    });
+  }
+  
+  // Funcionalidad para cambiar entre modales
+  if (registerLink && loginModal && registerModal) {
+    registerLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      loginModal.classList.remove('active');
+      registerModal.classList.add('active');
+    });
+  }
+  
+  if (loginLink && loginModal && registerModal) {
+    loginLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      registerModal.classList.remove('active');
+      loginModal.classList.add('active');
+    });
+  }
+});
+</script>
 </body>
 </html>

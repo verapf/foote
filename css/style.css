@@ -1476,4 +1476,75 @@ footer {
         height: 33vh;
       }
     }
+    /* Estilos para la página Quienes Somos */
+.about-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-section {
+  margin-bottom: 50px;
+}
+
+.about-title {
+  color: #40a900;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  color: #42241b;
+  font-size: 2.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para la página Quienes Somos */
+@media (max-width: 768px) {
+  .about-content,
+  .about-content.reverse {
+    flex-direction: column;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+}
+
 }
