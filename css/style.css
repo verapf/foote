@@ -1546,5 +1546,426 @@ footer {
     font-size: 1rem;
   }
 }
+/* Estilos para las páginas de categorías */
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.product-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.product-card {
+  width: 23%; /* Aproximadamente 25% menos el espacio para márgenes */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #42241b;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #42241b;
+  margin-bottom: 15px;
+}
+
+.product-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.cart-button,
+.favorite-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #40a900;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-button:hover,
+.favorite-button:hover {
+  background-color: #42241b;
+}
+
+.customize-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #40a900;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.customize-button:hover {
+  background-color: #42241b;
+}
+
+/* Responsive para productos */
+@media (max-width: 992px) {
+  .product-row {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 45%; /* Dos productos por fila en tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-card {
+    width: 100%; /* Un producto por fila en móviles */
+    margin-bottom: 20px;
+  }
+}
+
+/* Estilos para el Blog */
+.blog-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.blog-main-title {
+  color: #42241b;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.blog-article {
+  margin-bottom: 60px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.article-title {
+  color: #42241b;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 20px;
+  margin: 0;
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #40a900;
+}
+
+.article-content {
+  padding: 25px;
+}
+
+.article-content h3 {
+  color: #40a900;
+  font-size: 1.4rem;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.article-content p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.article-content ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.article-content ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 5px;
+  color: #333;
+}
+
+.separator {
+  height: 2px;
+  background-color: #f0f0f0;
+  margin: 30px 0;
+}
+
+.meta-description {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  border-left: 4px solid #40a900;
+}
+
+.meta-description strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #42241b;
+}
+
+.meta-description p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive para el Blog */
+@media (max-width: 768px) {
+  .blog-main-title {
+    font-size: 2rem;
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.2rem;
+  }
+}
+/* Mejoras para el responsive del header */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    padding: 10px;
+    height: auto;
+    min-height: 120px;
+  }
+
+  .menu-toggle {
+    order: 1;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .menu-toggle img {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-name {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+  }
+
+  .logo {
+    order: 2;
+    position: relative;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .eslogan {
+    order: 4;
+    width: 100%;
+    margin: 5px 0 0 0;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .header-icons {
+    order: 5;
+    margin-left: auto;
+    margin-top: 10px;
+  }
+
+  .cart-icon img,
+  .user-icon img {
+    width: 30px;
+    height: auto;
+  }
+
+  .cart-count {
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+  }
+}
+
+/* Para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+  .header-container {
+    padding: 8px;
+    min-height: 100px;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .section-name {
+    font-size: 14px;
+  }
+
+  .eslogan {
+    font-size: 12px;
+  }
+
+  .cart-icon,
+  .user-icon {
+    margin-left: 10px;
+  }
+
+  .cart-icon img,
+  .user-icon img {
+    width: 25px;
+  }
+}
+
+/* Mejoras para el responsive del footer */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Mejoras para el responsive de los productos */
+@media screen and (max-width: 992px) {
+  .product-row {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 45%; /* Dos productos por fila en tablets */
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .product-card {
+    width: 100%; /* Un producto por fila en móviles */
+  }
+
+  .boton-categoria {
+    width: 80% !important;
+    margin: 20px auto !important;
+  }
+}
+
+/* Mejoras para el responsive de los modales */
+@media screen and (max-width: 576px) {
+  .register-form,
+  .login-form {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .register-form h2,
+  .login-form h2 {
+    font-size: 20px;
+  }
+
+  .form-group input {
+    padding: 8px;
+  }
+}
+
+/* Mejoras para el responsive del blog */
+@media screen and (max-width: 768px) {
+  .blog-container {
+    padding: 15px;
+  }
+
+  .blog-main-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .article-title {
+    font-size: 1.4rem;
+    padding: 15px;
+  }
+
+  .article-content {
+    padding: 15px;
+  }
+
+  .article-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .article-content p {
+    font-size: 0.9rem;
+  }
+}
+
 
 }
